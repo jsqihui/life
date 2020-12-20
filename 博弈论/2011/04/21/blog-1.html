@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>博弈论8 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="博弈论8" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="博弈论学习笔记" />
+<meta property="og:description" content="博弈论学习笔记" />
+<link rel="canonical" href="https://jsqihui.github.io/life/%E5%8D%9A%E5%BC%88%E8%AE%BA/2011/04/21/blog-1.html" />
+<meta property="og:url" content="https://jsqihui.github.io/life/%E5%8D%9A%E5%BC%88%E8%AE%BA/2011/04/21/blog-1.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-04-21T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://jsqihui.github.io/life/%E5%8D%9A%E5%BC%88%E8%AE%BA/2011/04/21/blog-1.html","@type":"BlogPosting","headline":"博弈论8","dateModified":"2011-04-21T00:00:00-05:00","datePublished":"2011-04-21T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jsqihui.github.io/life/%E5%8D%9A%E5%BC%88%E8%AE%BA/2011/04/21/blog-1.html"},"description":"博弈论学习笔记","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/life/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jsqihui.github.io/life/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/life/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/life/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/life/about/">About Me</a><a class="page-link" href="/life/search/">Search</a><a class="page-link" href="/life/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">博弈论8</h1><p class="page-description">博弈论学习笔记</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2011-04-21T00:00:00-05:00" itemprop="datePublished">
+        Apr 21, 2011
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/life/categories/#博弈论">博弈论</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+</ul><p>关于这课的一些想法：这节课讲了一个模型，这个模型有稳定的均衡（strict Nash Equilibrium），不稳定的NE。这让我联想到自然届的一些东西，在物理学里面同样也有稳定的平衡比如说一个小球落在碗里面。不稳定的平衡，比如说一个猫静立在钢丝上。但是还有很多其它类型的平衡，动态平衡比如说溪流，比如说大坝水库的水平面，应该还有更多类型的平衡，一时间也想不出来。同样映射到社会中，也有同样的平衡存在，稳定的平衡类似于一个幸福的家庭，不稳定的平衡类似于对峙的两军，一触即发，动态的平衡比如说公司的裁员和招聘（保持公司总体员工人数不变）。</p>
+
+<p>说了这么多平衡或均衡让人感到有点疑惑，平衡本身到底如何定义。</p>
+
+<p>wikipedia上的一句话：Equilibrium is the condition of a system in which competing influences are balanced.</p>
+
+<p>http://en.wikipedia.org/wiki/Equilibrium</p>
+
+<p>要我来翻译的话还真不好翻，自己意会一下好了。</p>
+
+<p>wiki上给出了许多均衡的例子，大到星球和生态系统，小到化学反应之类。那么涉及了生物物理化学经济社会等等各个方面。其实如果是这样的话，那么各个领域的平衡就可以统一起来了，大道相通嘛，把生物的平衡用于公司管理，物理平衡来预测生态系统，不知道是否每个领域的平衡都有一些理论存在，如果是存在的话，大可搞一个平衡学之类的学科，来专门研究平衡这个东西。</p>
+
+<p>其实仔细的想一想，这个应该是属于系统学的一部分，但是系统学实在太大了，尤其是复杂系统的平衡性，简直让人无法下手，或者说复杂系统往往是混沌的，没有平衡性。或许把各学科的提取出来大家混用一下更能出成果吧，大家天天都埋头于自己的学科内，敝帚自珍，今天你调出个程序，明天你做了反应，后天他医好了个病人，实在无趣，离世界的本质越来越远，大道至简，可是要得简何易啊。</p>
+
+<p>恩，多插一句，不知道可不可以用熵的概念来重新定一下平衡，因为一个学科的发展总要一些基础的理论，相对论有两条公理，欧式几何有五条。哈哈，万一以后我能把平衡学发展为一门单独的学科，此文就可定下第一条定义，平衡性 = 负熵，哈哈哈开个玩笑，路漫漫兮，我还是想学医。</p>
+
+<p>虽然是玩笑之言吧，但是很多识之士还已经把大量的物理学，生物学定律用于社会学和经济学了。不知看本篇日志有学经济的没有，不知是否听过Econophysics（物理经济学），没听过的话，只能说您out了。。。</p>
+
+<p>btw，我真的是学计算机的。。。。哈哈哈。。。</p>
+
+<p>好了，闲扯结束，进入正题，其实有时候闲扯比正题更有意思，闲扯的是我的思想，正题却是记录别人的东西，实在无趣。</p>
+
+<p>—————————————————————————————————————————————-</p>
+
+<p>模型1 竞选者模型</p>
+
+<p>模型描述：</p>
+
+<p>1.参选人数不固定</p>
+
+<p>2.参选者不能改变自己的立场，也就是说你是温和左派，大家都知道，你是极端右派，大家也都明白。</p>
+
+<p>3.每一个投票人同时也是潜在的参选人。</p>
+
+<p>玩家：每一个投票者</p>
+
+<p>策略：参选或者不参选。当然无论玩家参不参加选举，他都将把票投给离自己立场最近的参选人。</p>
+
+<p>收益：</p>
+
+<p>参选且获胜，收益B=2C</p>
+
+<p>参选费用，C</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>对获胜者的不满意度 -</td>
+      <td>X-Y</td>
+      <td>，也就是说如果你是极左，然后获胜者是极右，那么您就等着吃瘪吧。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>用一条线来说明一下：</p>
+
+<p>-极左———偏左———–温和左派—-中间派—-温和右派———–偏右———极右-</p>
+
+<p>计算就免了，直接说结果：</p>
+
+<p>纳什均衡1： 中间派参选，其它人都不选。</p>
+
+<p>纳什均衡2： 温和左派和温和右派同时有一个人参选，且对称，其它人都不参选。</p>
+
+<p>注意均衡2有个限制，就是朝两边散开的时候，有一定范围，超过了这个范围，中间派就可以出来参选且获胜，就不再是均衡了。说的很模糊，懒得写，想弄清楚的自己去看第八课的视频好了。</p>
+
+<p>然后总结了几个结论：</p>
+
+<p>1.可能有多个NE，且不一定在中间（不同于第二课的例子）</p>
+
+<p>2.NE时，一个人的进入会导致相反方向人获胜。比如说，温和左和温和右平衡了，你是偏左如果进入选举的话，那么获胜的就是温和右派。</p>
+
+<p>3.guess and check could be effective，这条让我很不爽，就是说大家以后找均衡看看就好了，猜猜然后检测一下，不用算了。。。不过效率高也是真的。也许也真的存在就算列出数学公式也没法解的情况吧。</p>
+
+<p>模型2 location model</p>
+
+<p>玩家：两类人，高个子和矮个子 各100人</p>
+
+<p>策略：选择东村或者西村居住，东村西村的容量各为100人。如果选择超过容量，比如说有150人选了东村，你在150中的话，那么你有2/3的概率住进东村。</p>
+
+<p>收益：这个描述起来小麻烦，我画个图好了</p>
+
+<p>简单说呢，你希望住在一个完全混合的村子里，不然的话，你更倾向和你的同类住在一起。</p>
+
+<p>通过那个该死而且有效的guess and check方法呢，有三个NE（纳什均衡）</p>
+
+<p>NE1：100个高个住东村，100个矮个住西村。反之亦然。</p>
+
+<p>NE2: 50个高个，50个矮个住东村，西村亦然。</p>
+
+<p>NE3：所有人都选择东村，或者选择西村。靠系统规则来randomize。</p>
+
+<p>明显NE1是strict NE，NE2是weak NE，也就是前文说的不稳定平衡。NE3是下几节课要考虑的内容（策略组）。</p>
+
+<p>而NE1就是有名的segregation，种族隔离。</p>
+
+<p>课上完了，扯还没有完。</p>
+
+<p>据说一个叫谢林的通过研究这个得出结论，说群体表现出来的特性并非个人所愿。竟然还获得了诺贝尔奖。我勒个去，这不就是复杂系统里的涌现的概念吗？emerge。竟然这就可以？？看来复杂系统还是大有搞头的。。。</p>
+
+  </div><a class="u-url" href="/life/%E5%8D%9A%E5%BC%88%E8%AE%BA/2011/04/21/blog-1.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/life/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/life/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/life/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/life/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/life/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
