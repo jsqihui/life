@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>双子的单核cpu | 弃我去者</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="双子的单核cpu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="乱想" />
+<meta property="og:description" content="乱想" />
+<link rel="canonical" href="https://jsqihui.github.io/life/%E4%B9%B1%E6%83%B3/2009/12/18/blog-1.html" />
+<meta property="og:url" content="https://jsqihui.github.io/life/%E4%B9%B1%E6%83%B3/2009/12/18/blog-1.html" />
+<meta property="og:site_name" content="弃我去者" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2009-12-18T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://jsqihui.github.io/life/%E4%B9%B1%E6%83%B3/2009/12/18/blog-1.html","@type":"BlogPosting","headline":"双子的单核cpu","dateModified":"2009-12-18T00:00:00-06:00","datePublished":"2009-12-18T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jsqihui.github.io/life/%E4%B9%B1%E6%83%B3/2009/12/18/blog-1.html"},"description":"乱想","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/life/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jsqihui.github.io/life/feed.xml" title="弃我去者" /><link rel="shortcut icon" type="image/x-icon" href="/life/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/life/">弃我去者</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/life/about/">About Me</a><a class="page-link" href="/life/search/">Search</a><a class="page-link" href="/life/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">双子的单核cpu</h1><p class="page-description">乱想</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2009-12-18T00:00:00-06:00" itemprop="datePublished">
+        Dec 18, 2009
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/life/categories/#乱想">乱想</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+</ul><p>心有波澜。于是就写了一篇日志聊作以后自嘲之用。</p>
+
+<p>我是地道的传统文化主义者，完全信服古人的那一套，对己用道，待人以儒。</p>
+
+<p>可恨中国的文化研究实在是不太流行，所以慢慢了相信了星座的那一套（其实和二十四节气相呼应，倒也没什么太大的分别，只是换了种说法。我以前写的关于此方面的日志，http://blog.renren.com/GetEntry.do?id=385960384&amp;owner=1083539214）。</p>
+
+<p>他人不敢议（差点写成他人即地狱了，呵呵，此句出自萨特，唉，愉快夹杂着痛苦的回忆）anyway，作为一个资深的双子座三无青年（无房无车无老婆），对自己的双子性格做一点总结，其实偶尔想到的。</p>
+
+<p>双子给人的第一感觉，花心！！哈，原来铁定是个贬义词，现在都快2012了，也说不好是夸还是讽了。但根据我自己的经验来回答的话，对，双子是花心，但只是花心的单核超低速cpu（统计均值，高峰期，每二年处理一条命令，哈哈，just 编造数据）。每一个时间内只能接受一个命令。cpu的心里只有一个位置，装进了一个+，其他的就只能在外面排队，但是或许这个加号要运算很久，或许只是白驹过隙，或许直到死机。但当有空位的时候，排队的命令会接着进来一个。但只是一个，只能有一个，其它的乖乖的被晾在一边不闻不问，等不及的只能另寻其他resource。</p>
+
+<p>我想花心只是说一旦位置空出来，cpu会毫不犹豫的接纳下一个，似乎没有喘息。不像内存，只有充满了才会把原来的覆盖掉，只有装不下的现在才会冲淡历史的残留，不然内存会很多情的记住他很久很久。至此又体现了这颗cpu的另一面，无情。cpu是stateless的，对过去的事情丝毫无记忆。走了便走了，来了就来了，便如徐志摩的诗一般。但却不要以为cpu不会受伤，如果执行很不稳定的话，就算一个运算符，也可以让它陷入死循环，过热，烧坏。说到过热，又想到了一点好玩的。不同的符号会让cpu的发热不同，就像crash，不同的女人也会让双子的心跳速率和口吃话比例加到不同的值吧。</p>
+
+<p>这个cpu还挺挑嘴，不合胃口的命令是不接受的，也就是说，只有命令集中的命令才可正确加载。就算一直idle，也不会接受不合条件的非法命令。就算一直一直idle…</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="jsqihui/life"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/life/%E4%B9%B1%E6%83%B3/2009/12/18/blog-1.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/life/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/life/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/life/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
